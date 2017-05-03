@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Locate</string>
+    <string name="needPermissions">Need Permissions</string>
+    <string name="whatPermissions">To Get current location we need GPS</string>
+    <string name="grant">Grant</string>
+    <string name="cancel">Cancel</string>
+    <string name="unablePermission">Unable to get Permission</string>
+    <string name="SETTINGS_CHANGE_UNAVAILABLE">Settings Change Unavailable</string>
+    <string name="failed">LocationServices Failed to locate your location check your gps</string>
+    <string name="CAUSE_NETWORK_LOST">A suspension cause informing you that a peer device connection was lost.</string>
+    <string name="CAUSE_SERVICE_DISCONNECTED">A suspension cause informing that the service has been killed.</string>
+</resources>
