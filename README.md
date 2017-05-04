@@ -73,7 +73,7 @@ and you get the result in overridden method 'onGetLocationSuccess(double lat, do
 
 ### `Locate` methods
 * `debuggingMode()` 
- *	for traking and print all opreation happend and library in android studio logcat not working to yet :sweat_smile: .
+ 	* for tracking and print all operation happened and library in android studio logcat not working to yet :sweat_smile: 
 * `setPriority(Priority priority)`
 	 * used to  set Priority for LocationRequest based on google location library more here
   * [LocationRequest](https://developers.google.com/android/reference/com/google/android/gms/location/LocationRequest)
