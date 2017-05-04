@@ -28,12 +28,12 @@ It easily get your current location by one line !
 ```gradle
 
 dependencies {
-compile 'net.salah.locate:locate:1.0.1'
+   compile 'net.salah.locate:locate:1.0.1'
 }
 ```
 
 ------ 
-## Second 
+## Second Usage
 make your activity or fragment class implements Locate.LocationResult 
 
 ```java
@@ -73,7 +73,7 @@ and you get the result in overridden method 'onGetLocationSuccess(double lat, do
 
 ### `Locate` methods
 * `debuggingMode()` 
- *	for traking and print all opreation happend and library in android studio logcat not working to yet .
+ *	for traking and print all opreation happend and library in android studio logcat not working to yet :sweat_smile: .
 * `setPriority(Priority priority)`
 	 * used to  set Priority for LocationRequest based on google location library more here
   * [LocationRequest](https://developers.google.com/android/reference/com/google/android/gms/location/LocationRequest)
