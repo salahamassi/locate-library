@@ -77,7 +77,7 @@ public class LocateFragment extends Fragment implements GoogleApiClient.Connecti
 
     private void getMyLocation() {
         if (Build.VERSION.SDK_INT >= 23) {
-            if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION)!= PackageManager.PERMISSION_GRANTED) {
+            if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION)!= PackageManager.PERMISSION_GRANTED) {
 
                 if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION)) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -87,7 +87,9 @@ public class LocateFragment extends Fragment implements GoogleApiClient.Connecti
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.cancel();
-                            ActivityCompat.requestPermissions(getActivity(),new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},PERMISSION_CALLBACK_CONSTANT);
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                                requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION},PERMISSION_CALLBACK_CONSTANT);
+                            }
                         }
                     });
                     builder.setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
@@ -99,7 +101,7 @@ public class LocateFragment extends Fragment implements GoogleApiClient.Connecti
                     builder.show();
 
                 }else{
-                   requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},PERMISSION_CALLBACK_CONSTANT);
+                   requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION},PERMISSION_CALLBACK_CONSTANT);
                 }
             }else {
                 Location mCurrentLocation = LocationServices.FusedLocationApi.getLastLocation(client);
@@ -188,8 +190,6 @@ public class LocateFragment extends Fragment implements GoogleApiClient.Connecti
     public void onRequestPermissionsResult(int requestCode,@NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == PERMISSION_CALLBACK_CONSTANT) {
-            System.out.println(grantResults.length+" "+grantResults[0]);
-
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                    getMyLocation();
             }else {

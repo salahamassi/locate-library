@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity implements Locate.LocationRe
             public void onClick(View v) {
                 Locate.with(MainActivity.this)
                         .addLocationResultListener(MainActivity.this)
-                        .setPriority(Locate.Priority.PRIORITY_HIGH_ACCURACY)
                         .build();
             }
         });
