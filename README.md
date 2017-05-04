@@ -11,7 +11,7 @@ It easily get your current location by one line !
 
 # How to use it? 
 
-## First install it
+## First Install
 **Maven**
 
 ```xml
