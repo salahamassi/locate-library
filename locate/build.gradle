@@ -6,7 +6,7 @@ publish {
     groupId = 'net.salah.locate'
     artifactId = 'locate'
     uploadName = 'locate-library'
-    publishVersion = '1.0.0'
+    publishVersion = '1.0.2'
     desc = 'get your location lat lng'
     dryRun = false
     website = 'https://github.com/salahamassi/locate-library'
@@ -16,10 +16,10 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 15
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.02"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 

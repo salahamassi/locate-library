@@ -29,7 +29,7 @@ import com.google.android.gms.location.LocationSettingsRequest;
 import com.google.android.gms.location.LocationSettingsResult;
 import com.google.android.gms.location.LocationSettingsStatusCodes;
 
-public class LocateFragment extends Fragment implements GoogleApiClient.ConnectionCallbacks,
+class LocateFragment extends Fragment implements GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener, LocationListener, ResultCallback<LocationSettingsResult> {
 
     private static final int PERMISSION_CALLBACK_CONSTANT = 12332;

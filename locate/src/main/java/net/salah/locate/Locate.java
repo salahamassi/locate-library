@@ -49,8 +49,29 @@ public class Locate {
     }
 
 
+    enum Priority {
+        PRIORITY_HIGH_ACCURACY(100), PRIORITY_BALANCED_POWER_ACCURACY(102), PRIORITY_LOW_POWER(104), PRIORITY_NO_POWER(105);
+        private final int value;
 
-    public static final class LocationBuilder implements LocationBuilderBase{
+        Priority(int value) {
+            this.value = value;
+        }
+
+        public int getValue() {
+            return value;
+        }
+    }
+
+
+    public interface LocationResult {
+
+        void onGetLocationSuccess(double lat, double lng);
+
+        void onGetLocationFailed(@Nullable String message);
+
+    }
+
+    public static final class LocationBuilder implements LocationBuilderBase {
 
         private final WeakReference<Activity> context;
         private LocationConfig locationConfig;
@@ -94,28 +115,6 @@ public class Locate {
         @Override
         public Locate build() {
            return new Locate(this);
-        }
-    }
-
-
-    public interface LocationResult{
-
-        void onGetLocationSuccess(double lat, double lng);
-
-        void onGetLocationFailed(@Nullable String message);
-
-    }
-
-    public enum Priority {
-        PRIORITY_HIGH_ACCURACY(100), PRIORITY_BALANCED_POWER_ACCURACY(102), PRIORITY_LOW_POWER(104),PRIORITY_NO_POWER(105);
-        private final int value;
-
-        Priority(int value) {
-            this.value = value;
-        }
-
-        public int getValue() {
-            return value;
         }
     }
 

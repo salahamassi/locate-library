@@ -8,9 +8,9 @@ import android.location.LocationManager;
  */
 
 
-public class Helper {
+class Helper {
 
-    public static boolean isGpsEnabled (Context mContext){
+    static boolean isGpsEnabled(Context mContext) {
         LocationManager locationManager = (LocationManager) mContext.getSystemService(Context.LOCATION_SERVICE);
         return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
     }
