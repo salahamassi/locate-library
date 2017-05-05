@@ -18,7 +18,7 @@ It easily get your current location by one line !
 <dependency>
   <groupId>net.salah.locate</groupId>
   <artifactId>locate</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <type>pom</type>
 </dependency>
 ```
@@ -28,7 +28,7 @@ It easily get your current location by one line !
 ```gradle
 
 dependencies {
-   compile 'net.salah.locate:locate:1.0.1'
+   compile 'net.salah.locate:locate:1.0.2'
 }
 ```
 
