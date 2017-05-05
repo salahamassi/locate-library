@@ -87,7 +87,7 @@ and you get the result in overridden method 'onGetLocationSuccess(double lat, do
    * [LocationRequest](https://developers.google.com/android/reference/com/google/android/gms/location/LocationRequest)
 
   ------ 
-# Developer contatct 
+# Developer contact 
    * [Facebook](https://www.facebook.com/profile.php?id=100006656534009)
    * [Twitter](https://twitter.com/salahamassi)
 
